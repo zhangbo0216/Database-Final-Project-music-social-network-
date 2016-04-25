@@ -9,15 +9,15 @@
 			$host = 'localhost';
 			$port = 3306;
 
-			$link = mysqli_init();
-			$success = mysqli_real_connect(
-   			$link, 
+			//$link = mysqli_init();
+			$success = mysqli_connect(
+   			//$link, 
    			$host, 
    			$user, 
-   			$lpassword, 
-   			$db,
-   			$port);
-   			$result = mysqli_query($link,"select * from fans where username='$username' and password='$password'");
+   			"", 
+   			$db
+   			);
+   			$result = mysqli_query($success,"select * from fans where username='{$username}' and password='{$password}'");
    			
    			$c_password = mysqli_fetch_array($result);
    			if ($c_password['username']!=$username)

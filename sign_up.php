@@ -32,13 +32,13 @@
 			$port = 3306;
 
 			$link = mysqli_init();
-			$success = mysqli_real_connect(
-   			$link, 
+			$success = mysqli_connect(
+   			//$link, 
    			$host, 
    			$user, 
-   			$lpassword, 
-   			$db,
-   			$port);
+   			"", 
+   			$db
+   			);
    			$result = mysqli_query($link,"insert into fans (username, email, password, register_time, description, address, privacy) values ('$username', '$email', '$password', CURRENT_TIMESTAMP, '$description', '$address', '$privacy')");
 
    		?>
