@@ -1,0 +1,73 @@
+.header h1 {
+	font-size: 20px;
+  font-family: Palatino, 'Palatino Linotype', serif;
+  color:red;
+	margin:auto;
+}
+
+
+.contain>div{
+	position: relative;
+	display: inline-block;
+	margin-top:250px;
+	margin-left:150px;
+}
+
+div p {
+	position: relative;
+	margin-top: 40px;
+    font-size: 40px;
+	font-family: times;
+	color: rgb(100,100,100);
+}
+
+.newpost {
+	border: 2px solid green;
+	background-color:hsla(120, 100%, 20%, 0.4);
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+.edit {
+	border: 2px solid blue;
+	background-color:hsla(240, 100%,  20%, 0.4);
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+.checkpost {
+	border: 2px solid red;
+	background-color:hsla(0, 100%,  20%, 0.4) ;
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+.search {
+	border: 2px solid orange;
+	background-color:hsla(60, 100%, 20%, 0.4);
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+.friends {
+	border: 2px solid cyan;
+	background-color:hsla(180, 100%, 20%, 0.4);
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+
+body{
+	background-image:url("http://www.musicmarketing360.com/wp-content/uploads/2015/08/how-to-promote-your-music-with-instagram-concert.jpg");
+	background-size:cover;
+}

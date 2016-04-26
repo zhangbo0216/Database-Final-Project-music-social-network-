@@ -1,0 +1,46 @@
+body{
+	background-image: url("https://sites.psu.edu/music4ever/wp-content/uploads/sites/13016/2014/05/cropped-Microphone-Music-Headphones.jpg");
+  background-size: cover;
+}
+
+h1 {
+	font-size: 50px;
+  font-family: Palatino, 'Palatino Linotype', serif;
+  color:red;
+	margin-top: 100px;
+	margin-left: 30px;
+}
+.log_in { 
+	position: absolute;
+	top: 20%;
+	left: 70%;
+	margin: 20px 0 0 -10px;
+	width:300px;
+	height:350px;
+	border: 1px solid rgba(0,0,0,0.3);
+	background-color:yellow;
+	background-color:rgba(0,0,0,0.5); 
+}
+ h2 { 
+ padding-top: 20px;
+ color: yellow; 
+text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+letter-spacing:1px; 
+text-align:center;
+font-size:20px; 
+color:yellow;
+}
+
+ p INPUT{ 
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: orange; 
+ MARGIN:auto; 
+ PADDING: 4px; 
+ WIDTH: 90px; 
+ DISPLAY: block;  
+ COLOR: #ffffff; FONT-SIZE: 13px; 
+ CURSOR: pointer; 
+ border-radius: 4px 4px 4px 4px; 
+}
+
