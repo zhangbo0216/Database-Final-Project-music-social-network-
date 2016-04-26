@@ -12,6 +12,7 @@
   				<option value="friend">Friend Only</option>
   				<option value="self">Secret</option>
 			</select><br>
+			<input type='hidden' name='username' value="<?php echo $_POST['username'];?>" > 
 			<input type="submit">
 		</form>
 		<?php

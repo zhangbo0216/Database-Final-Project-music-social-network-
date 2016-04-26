@@ -1,8 +1,8 @@
 <html>
 	<body>
 		<?php
+			
 			$username=$_POST["username"];
-			$password=$_POST["password"];
 			$user = 'root';
 			$lpassword = 'root';
 			$db = 'music_social';
@@ -17,7 +17,24 @@
    			$lpassword, 
    			$db,
    			$port);
-   			$result
+   			$result=mysqli_query($link,"select * from user_post where author='$username'");
+   			
+
+   
+   			while($row = mysqli_fetch_array($result))
+   			{	
+
+    				echo $row['title'];
+					
+					echo "<br/>";
+   			}
+   		
+   
+
+　　			
+				
+   		
+
    		?>
 	</body>
 </html> 
