@@ -12,7 +12,7 @@
 				<th>Username:</th> <td><input type="text" name="username"><br></td>
 			</tr>
 			<tr>
-				<th>Password:</th><td> <input type="text" name="password"><br></td>
+				<th>Password:</th><td> <input type="pasword" name="password"><br></td>
 			</tr>
 			<tr>
 				<th>Email:</th><td> <input type="text" name="email"><br></td>

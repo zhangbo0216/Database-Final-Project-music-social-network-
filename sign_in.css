@@ -15,9 +15,10 @@ h1 {
 	top: 20%;
 	left: 70%;
 	margin: 20px 0 0 -10px;
-	width:300px;
+	width:400px;
 	height:350px;
 	border: 1px solid rgba(0,0,0,0.3);
+	border-radius:40px 40px 40px 40px;
 	background-color:yellow;
 	background-color:rgba(0,0,0,0.5); 
 }
@@ -31,15 +32,24 @@ font-size:20px;
 color:yellow;
 }
 
+input{
+	border: 1px solid;
+	border-radius: 4px;
+	width:200px;
+	background: rgba(0,0,0,0.3);
+	color: yellow;
+	font-size:17px;
+}
+
  p INPUT{ 
  BORDER: 1px solid; 
  LINE-HEIGHT: 20px; 
  BACKGROUND-COLOR: orange; 
  MARGIN:auto; 
  PADDING: 4px; 
- WIDTH: 90px; 
+ WIDTH: 190px; 
  DISPLAY: block;  
- COLOR: #ffffff; FONT-SIZE: 13px; 
+ COLOR: #ffffff; FONT-SIZE: 20px; 
  CURSOR: pointer; 
  border-radius: 4px 4px 4px 4px; 
 }

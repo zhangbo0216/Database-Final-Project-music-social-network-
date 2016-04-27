@@ -1,6 +1,7 @@
 body{
-	background-image: url("https://sites.psu.edu/music4ever/wp-content/uploads/sites/13016/2014/05/cropped-Microphone-Music-Headphones.jpg");
-background-size: cover;}
+	background-image:url("http://www.musicmarketing360.com/wp-content/uploads/2015/08/how-to-promote-your-music-with-instagram-concert.jpg");
+	background-size:cover;
+}
 
 .header h1 {
 	font-size: 20px;
@@ -8,11 +9,10 @@ background-size: cover;}
   color:red;
 	margin:auto;
 }
-
 .log_in { 
 	position: absolute;
 	top: 20%;
-	left: 70%;
+	left: 35%;
 	margin: 20px 0 0 -10px;
 	width:400px;
 	height:350px;
@@ -25,6 +25,10 @@ background-size: cover;}
 	padding-left:20px;
 	padding-right:20px;
 }
+table{
+	 padding-top: 10px;
+	 margin-left:20px;
+}
  tr { 
  padding-top: 20px;
  color: yellow; 
@@ -34,7 +38,6 @@ text-align:center;
 font-size:20px; 
 color:yellow;
 }
-
  #sign { 
  BORDER: 1px solid; 
  LINE-HEIGHT: 20px; 
@@ -44,15 +47,15 @@ color:yellow;
  WIDTH: 190px; 
  DISPLAY: block;  
  COLOR: #ffffff; 
- FONT-SIZE: 20px; 
  CURSOR: pointer; 
  border-radius: 4px 4px 4px 4px; 
+ font-size:20px;
 }
 
 input{
 	border: 1px solid;
 	border-radius: 4px;
-	width:200px;
+	width:110%;
 	background: rgba(0,0,0,0.3);
 	color: yellow;
 	font-size:17px;
@@ -61,8 +64,15 @@ input{
 select{
 	border: 1px solid;
 	border-radius: 4px;
-	width:100%;
+	width:110%;
 	background: rgba(0,0,0,0.3);
 	color: yellow;
 	font-size:17px;
+}
+
+ h2{
+	color: yellow;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Comic Sans MS", cursive, sans-serif
 }
