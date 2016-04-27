@@ -34,7 +34,21 @@
   				<form action='check_my_post.php' method='post'>
   					<button type='submit' name='username' value=$username>Check My Post</button>
   				</form>
-  				
+  				<form action='friends.php' method='post'>
+  					<button type='submit' name='username' value=$username>My Friends</button>
+  				</form>
+  				<form action='search.php' method='post'>				
+  					<input type='text' name='content'>
+  					<select type='text' name='database'>
+  						<option value=1>Post</option>
+  						<option value=2>News</option>
+  						<option value=3>User</option>
+  						<option value=4>Artist</option>
+  						<option value=5>Venue</option>
+  						<option value=6>Concert</option>
+  					</select><br>
+  					<button type='submit' name='username' value=$username>Search</button>
+  				</form>
   				";
    			}
 		?>
