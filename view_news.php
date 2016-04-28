@@ -1,9 +1,6 @@
 <html>
 	<body>
 		<?php
-			$username=$_POST["username"];
-			$content=$_POST["content"];
-			$database=$_POST["database"];
 			$user = 'root';
 			$lpassword = 'root';
 			$db = 'music_social';
