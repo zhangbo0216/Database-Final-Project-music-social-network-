@@ -34,7 +34,10 @@
    			$port);
    			$result=mysqli_query($link,"update fans set $attribute = '$content' where username = '$username'");
 			
+			$result=mysqli_query($link,"select * from fans where username = '$username'");
 			
+			$row = mysqli_fetch_array($result);
+			echo $row["username"],$row["email"],$row["register_time"],$row["DESCRIPTION"],$row["address"];
    		?>
 	</body>
 </html> 
