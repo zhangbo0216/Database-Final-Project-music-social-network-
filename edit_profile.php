@@ -47,6 +47,7 @@
 			
 			$row = mysqli_fetch_array($result);
 			echo $row["username"],$row["email"],$row["register_time"],$row["DESCRIPTION"],$row["address"],$row["privacy"];
+
    		?>
 	</body>
 </html> 
