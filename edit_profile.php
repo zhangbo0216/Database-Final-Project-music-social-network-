@@ -33,7 +33,8 @@
    			$db,
    			$port);
    			$result=mysqli_query($link,"update fans set $attribute = '$content' where username = '$username'");
-
+			
+			
    		?>
 	</body>
 </html> 

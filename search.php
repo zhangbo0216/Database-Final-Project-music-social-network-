@@ -39,7 +39,11 @@
 				$result = mysqli_query($link,"select newsname from news where content like '%$content%' ");
 				while($row = mysqli_fetch_array($result))
 				{
-					echo $row['newsname'];			
+					$newsname=$row['newsname'];		
+					echo "<form action='view_news.php' method='post'>						
+  						<button type='submit' name='newsname' value=$newsname>$newsname</button> 
+  						<input type='hidden' name='username' value=$username>  						 						 
+					</form>";	
 					echo "<br/>";
 				}
 			}
@@ -65,7 +69,12 @@
 				where ARTIST_NAME like '%$content%' ");
 				while($row = mysqli_fetch_array($result))
 				{
-					echo $row['ARTIST_NAME'];			
+					$ARTIST_NAME=$row['ARTIST_NAME'];
+					echo 
+					"<form action='view_artist.php' method='post'>						
+  						<button type='submit' name='ARTIST_NAME' value=$ARTIST_NAME>$ARTIST_NAME</button> 
+  						<input type='hidden' name='username' value=$username>  						 						 
+					</form>";				
 					echo "<br/>";
 				}
 			}
@@ -76,7 +85,13 @@
 				where venuename like '%$content%' ");
 				while($row = mysqli_fetch_array($result))
 				{
-					echo $row['venuename'];			
+					$venuename=$row['venuename'];
+					$venue_id=$row['venue_id'];
+					echo 
+					"<form action='view_venue.php' method='post'>						
+  						<button type='submit' name='venue_id' value=$venue_id>$venuename</button> 
+  						<input type='hidden' name='username' value=$username>  						 						 
+					</form>";		
 					echo "<br/>";
 				}
 			}
@@ -87,7 +102,13 @@
 				where CONCERT_NAME like '%$content%' ");
 				while($row = mysqli_fetch_array($result))
 				{
-					echo $row['CONCERT_NAME'];			
+					$CONCERT_NAME=$row['CONCERT_NAME'];	
+					$concert_id=$row['concert_id'];
+					echo 
+					"<form action='view_concert.php' method='post'>						
+  						<button type='submit' name='concert_id' value=$concert_id>$CONCERT_NAME</button> 
+  						<input type='hidden' name='username' value=$username>  						 						 
+					</form>";				
 					echo "<br/>";
 				}
 			}
