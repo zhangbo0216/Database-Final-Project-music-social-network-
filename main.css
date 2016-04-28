@@ -73,6 +73,8 @@ body{
 	background-size:cover;
 }
 
+
+
  #sign { 
  BORDER: 1px solid; 
  LINE-HEIGHT: 20px; 
@@ -84,7 +86,7 @@ body{
  COLOR: #ffffff; 
  CURSOR: pointer; 
  border-radius: 4px 4px 4px 4px; 
- font-size:20px;
+ font-size:22px;
 }
 
 .se_con{

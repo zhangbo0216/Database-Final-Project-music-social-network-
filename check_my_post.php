@@ -1,4 +1,8 @@
 <html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="check_my_post.css"/>
+		<title>check_my_post</title>
+	</head>
 	<body>
 		<?php
 
@@ -18,7 +22,18 @@
    			"", 
    			$db
    			);
-   			$result
+   			$result=mysqli_query($success,"select * from user_post where author='$username'");
+   			
+
+   
+   			while($row = mysqli_fetch_array($result))
+   			{	
+
+    				echo $row['title'];
+					
+					echo "<br/>";
+   			}
+   		
    		?>
 	</body>
 </html> 

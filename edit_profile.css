@@ -1,0 +1,83 @@
+body{
+	background-image:url("http://www.musicmarketing360.com/wp-content/uploads/2015/08/how-to-promote-your-music-with-instagram-concert.jpg");
+	background-size:cover;
+}
+
+
+.header h1 {
+	font-size: 20px;
+  font-family: Impact, Charcoal, sans-serif;
+  color:red;
+	margin:auto;
+}
+
+.log_in { 
+	position: absolute;
+	top: 20%;
+	left: 35%;
+	margin: 20px 0 0 -10px;
+	width:400px;
+	height:350px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius:40px 40px 40px 40px;
+	background-color:hsla(240, 100%,  20%, 0.4); 
+	padding-top:70px;
+	padding-bottom:30px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+h2{
+	color: yellow;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+.edit_pro{
+ margin-left:40px;
+ display:inline;
+}
+
+.edit_button{
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	margin: 20px 0 0 -10px;
+}
+
+#context{
+	border: 1px solid;
+	border-radius: 4px;
+	width:50%;
+	height: 50px;
+	background-color:hsla(240, 100%,  20%, 0.4); 
+	color: yellow;
+	font-size:22px;
+}
+
+select{
+	border: 1px solid;
+	border-radius: 4px;
+	width:30%;
+	height: 50px;
+	background-color:hsla(240, 100%,  20%, 0.4); 
+	color: yellow;
+	font-size:22px;
+}
+
+
+ #sign { 
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: orange; 
+ MARGIN:auto; 
+ PADDING: 4px; 
+ WIDTH: 190px; 
+ height: 50px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 4px 4px 4px 4px; 
+ font-size:26px;
+}
