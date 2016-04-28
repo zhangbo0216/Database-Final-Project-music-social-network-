@@ -34,7 +34,7 @@
 
 				<div class='contain'>
    				<div class='main'><form action='edit_profile.php' method='post'>
-  					<button class='edit' type='submit' name='username' value=$username><p>Edit My Profile</p></button>
+  					<button class='edit' type='submit' name='username' value=$username><p>My Profile</p></button>
   				</form></div>
    				<div class='main'><form action='new_post.php' method='post'>
   					<button class='newpost' type='submit' name='username' value=$username><p>New Post</p></button>

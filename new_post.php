@@ -13,7 +13,7 @@
 				<th>Title:</th><td><input type="text" name="title"><br></td>
 			</tr>
 			<tr>
-				<th>Content:</th><td> <input type="text" name="content"><br></td>
+				<th>Content:</th><td><textarea id="context" cols="30" rows="3" name="content"></textarea><br></td>
 			</tr>
 			<tr>
 				<th>Photo:</th><td> <input type="text" name="photo"><br></td>
@@ -43,27 +43,34 @@
 			if ($_SERVER["REQUEST_METHOD"] == "POST") 
 			{
 				$username=$_POST['username'];
-				$title=$_POST['title'];
-				$content=$_POST['content'];
-				$photo=$_POST['photo'];
-				$video=$_POST['video'];
-				$location=$_POST['location'];
-				$privacy=$_POST['privacy'];
-				$user = 'root';
-				$lpassword = '';
-				$db = 'music_social';
-				$host = 'localhost';
-				$port = 3306;
+				if(isset($_POST['title']))
+				{
+					if(empty($_POST['title'])==False)
+					{
+						$title=$_POST['title'];
+						//echo $title;
+						$content=$_POST['content'];
+						$photo=$_POST['photo'];
+						$video=$_POST['video'];
+						$location=$_POST['location'];
+						$privacy=$_POST['privacy'];
+						$user = 'root';
+						$lpassword = '';
+						$db = 'music_social';
+						$host = 'localhost';
+						$port = 3306;
 
-				//$link = mysqli_init();
-				$success = mysqli_connect(
-				//$link, 
-				$host, 
-				$user, 
-				"", 
-				$db
-				);
-				$result=mysqli_query($success,"Insert into user_post (author, content, photo, video, title, location, post_time, privacy) values('$username', '$content', '$photo', '$video', '$title', '$location', CURRENT_TIMESTAMP,'$privacy')");
+						//$link = mysqli_init();
+						$success = mysqli_connect(
+						//$link, 
+						$host, 
+						$user, 
+						"", 
+						$db
+						);
+						$result=mysqli_query($success,"Insert into user_post (author, content, photo, video, title, location, post_time, privacy) values('$username', '$content', '$photo', '$video', '$title', '$location', CURRENT_TIMESTAMP,'$privacy')");
+					}
+				}
 			}
    		?>
 	</body>

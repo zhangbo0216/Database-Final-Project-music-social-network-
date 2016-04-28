@@ -54,16 +54,16 @@ color:yellow;
 input{
 	border: 1px solid;
 	border-radius: 4px;
-	width:110%;
+	width:80%;
 	background-color:hsla(120, 100%, 20%, 0.4);
 	color: yellow;
-	font-size:17px;
+	font-size:20px;
 }
 
 select{
 	border: 1px solid;
 	border-radius: 4px;
-	width:110%;
+	width:80%;
 	background-color:hsla(120, 100%, 20%, 0.4);
 	color: yellow;
 	font-size:17px;
@@ -74,4 +74,14 @@ select{
 	text-align: center;
 	font-weight: bold;
 	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+#context
+{
+	border: 1px solid;
+	border-radius: 4px;
+	width:80%;
+	background-color:hsla(120, 100%, 20%, 0.4);
+	color: yellow;
+	font-size:17px;
 }

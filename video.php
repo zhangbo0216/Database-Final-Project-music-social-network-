@@ -24,13 +24,16 @@
 	</head>
 	<body>
 	<?php
-		$query= mysqli_query($success,"SELECT * FROM post_video");
+		$query= mysqli_query($success,"SELECT * FROM user_post");
 		while($row=mysqli_fetch_assoc($query))
 		{
-			$id=$row['video_id'];
-			$name=$row['video_name'];
+			//$id=$row['video_id'];
+			//$name=$row['video_name'];
 			
-			echo "<a href='watch.php?video_id=$id'> $name </a><br/>";
+			$url=$row['video'];
+			echo $url;
+			echo"<video src='$url' width='560' height='315'></video>"; 
+			//echo "<a href='watch.php?video_id=$id'> $name </a><br/>";
 		}
 	?>	
 	</body>
