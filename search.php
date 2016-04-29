@@ -1,5 +1,12 @@
 <html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="search.css"/>
+		<title>search</title>
+	</head>
 	<body>
+	<div class="header"><h1>M&Z's Music Fun Social Network</h1>
+		<h2>Results Are Shown Below:</h2>
+	</div>
 		<?php
 			$username=$_POST["username"];
 			$content=$_POST["content"];
@@ -22,26 +29,30 @@
    			{
 				$result = mysqli_query($success,"select title
 				from user_post
-				where content like '%$content%' and privacy ='public'");
+				where (content like '%$content%' or title like '%$content%') and privacy ='public'");
 				while($row = mysqli_fetch_array($result))
 				{
 					$title=$row['title'];
 					echo 
-					"<form action='view_post.php' method='post'>						
-  						<button type='submit' name='title' value=$title>$title</button> 
+					"<div>
+					<form action='view_post.php' method='post'>						
+  						<button id='sign' type='submit' name='title' value='$title'>$title</button> 
   						<input type='hidden' name='username' value=$username>  						 						 
-					</form>";					
+					</form></div>";
+									
 					echo "<br/>";
 				}
 			}
 			if ($database==2)
    			{
-				$result = mysqli_query($success,"select newsname from news where content like '%$content%' ");
+				$result = mysqli_query($success,"select newsname from news where content like '%$content%' or newsname like '%$content%'");
+		
 				while($row = mysqli_fetch_array($result))
 				{
-					$newsname=$row['newsname'];		
+					$newsname=$row['newsname'];
+					//echo $newsname;					
 					echo "<form action='view_news.php' method='post'>						
-  						<button type='submit' name='newsname' value=$newsname>$newsname</button> 
+  						<button id='sign' type='submit' name='newsname' value='$newsname'>$newsname</button> 
   						<input type='hidden' name='username' value=$username>  						 						 
 					</form>";			
 					echo "<br/>";
@@ -57,7 +68,7 @@
 					$uname=$row['username'];
 					echo 
 					"<form action='view_user.php' method='post'>						
-  						<button type='submit' name='vuser' value=$uname>$uname</button> 
+  						<button id='sign' type='submit' name='vuser' value='$uname'>$uname</button> 
   						<input type='hidden' name='username' value=$username>  						 						 
 					</form>";			
 					echo "<br/>";
@@ -72,7 +83,7 @@
 					$ARTIST_NAME=$row['ARTIST_NAME'];
 					echo 
 					"<form action='view_artist.php' method='post'>						
-  						<button type='submit' name='ARTIST_NAME' value=$ARTIST_NAME>$ARTIST_NAME</button> 
+  						<button id='sign' type='submit' name='ARTIST_NAME' value='$ARTIST_NAME'>$ARTIST_NAME</button> 
   						<input type='hidden' name='username' value=$username>  						 						 
 					</form>";							
 					echo "<br/>";
@@ -89,7 +100,7 @@
 					$venue_id=$row['venue_id'];
 					echo 
 					"<form action='view_venue.php' method='post'>						
-  						<button type='submit' name='venue_id' value=$venue_id>$venuename</button> 
+  						<button id='sign' type='submit' name='venue_id' value='$venue_id'>$venuename</button> 
   						<input type='hidden' name='username' value=$username>  						 						 
 					</form>";			
 					echo "<br/>";
@@ -106,7 +117,7 @@
 					$concert_id=$row['concert_id'];
 					echo 
 					"<form action='view_concert.php' method='post'>						
-  						<button type='submit' name='concert_id' value=$concert_id>$CONCERT_NAME</button> 
+  						<button id='sign' type='submit' name='concert_id' value='$concert_id'>$CONCERT_NAME</button> 
   						<input type='hidden' name='username' value=$username>  						 						 
 					</form>";				
 					echo "<br/>";

@@ -1,5 +1,10 @@
 <html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="view_venue.css"/>
+		<title>view venue</title>
+	</head>
 	<body>
+	<div class="header"><h1>M&Z's Music Fun Social Network</h1></div>
 		<?php
 
 			$user = 'root';
@@ -23,7 +28,16 @@
    			$result = mysqli_query($success,"select * from venues
    			where venue_id='$venue_id' ");
    			$row = mysqli_fetch_array($result);
-			echo $row["venuename"],$row["address"],$row["DESCRIPTION"];
+			$vname= $row["venuename"];
+			$addr=$row["address"];
+			$desc=$row["description"];
+			echo"
+					<p><span id='info'>Venue Information</span></br>
+						<span>Venue Name:</span> $vname</br>
+						<span>Address:</span> $addr</br>
+						<span>Description:</span> $desc</br>
+					</p>
+			";
 		
 		?>
 	</body>

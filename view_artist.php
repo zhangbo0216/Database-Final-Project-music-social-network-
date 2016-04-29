@@ -1,5 +1,10 @@
 <html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="view_artist.css"/>
+		<title>view artist</title>
+	</head>
 	<body>
+	<div class="header"><h1>M&Z's Music Fun Social Network</h1></div>
 		<?php
 
 			$user = 'root';
@@ -24,7 +29,16 @@
    			$result = mysqli_query($success,"select * from artist 
    			where ARTIST_NAME='$ARTIST_NAME' ");
    			$row = mysqli_fetch_array($result);
-			echo $row["ARTIST_NAME"],$row["GENRE"],$row["DESCRIPTION"];
+			$aname=$row["ARTIST_NAME"];
+			$ge=$row["GENRE"];
+			$desc=$row["DESCRIPTION"];
+			echo "
+					<p><span id='info'>Artist Information</span></br>
+						<span>Artist Name:</span> $aname</br>
+						<span>Genre:</span> $ge</br>
+						<span>Description:</span> $desc</br>
+					</p>
+			";
 		
 		?>
 	</body>

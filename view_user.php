@@ -1,5 +1,11 @@
 <html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="view_user.css"/>
+		<title>view user</title>
+	</head>
 	<body>
+	<div class="header"><h1>M&Z's Music Fun Social Network</h1></div>
+		<h2>User Posts:</h2>
 		<?php
 
 			$user = 'root';
@@ -24,8 +30,10 @@
    			
    			while($row = mysqli_fetch_array($result))
 			{
-
-				echo $row["title"];
+				$ti=$row["title"];
+				echo "<div class='tit'>
+						$ti</br>
+						</div>";
 			}
 			
 			$result = mysqli_query($success,"select privacy from fans 
@@ -39,7 +47,20 @@
    				$result = mysqli_query($success,"select * from fans 
    				where username='$vuser' ");
    				$row = mysqli_fetch_array($result);
-				echo $row["username"],$row["email"],$row["register_time"],$row["DESCRIPTION"],$row["address"];
+				$uname=$row["username"];
+				$em=$row["email"];
+				$rtime=$row["register_time"];
+				$desc=$row["DESCRIPTION"];
+				$addr=$row["address"];
+				echo "
+						<p><span>User Information</span></br>
+						Username: $uname</br>
+						Email: $em</br>
+						Rigister Time: $rtime</br>
+						Description: $desc</br>
+						Address: $addr</br>
+					</p>
+				";
    			}
 		
 		?>

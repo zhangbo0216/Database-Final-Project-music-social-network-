@@ -1,0 +1,39 @@
+body{
+	background-image:url("https://www3.ebu.ch/files/live/sites/ebu/files/Trainings/Academy/Courses/2015/IMG/IMG2-social-media-and-music.png");
+	background-size:cover;
+}
+
+.header h1 {
+	font-size: 30px;
+  font-family: Impact, Charcoal, sans-serif;
+  color:red;
+	margin:auto;
+}
+
+p{
+	color:yellow;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius:40px 40px 40px 40px;
+	background-color:hsla(240, 100%,  20%, 0.4); 
+	width:520px;
+	height:350px;
+	padding-top:70px;
+	padding-bottom:30px;
+	padding-left:70px;
+	padding-right:10px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 25px;
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	text-align: left;
+}
+
+#info {
+	color:green;
+	font-size:40px;
+}
+
+span{
+	color:green;
+}

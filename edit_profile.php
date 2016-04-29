@@ -46,7 +46,22 @@
 			$result=mysqli_query($success, "select * from fans where username = '$username'");
 			
 			$row = mysqli_fetch_array($result);
-			echo $row["username"],$row["email"],$row["register_time"],$row["DESCRIPTION"],$row["address"],$row["privacy"];
+			$uname=	$row['username'];
+			$em=$row['email'];
+			$rtime=	$row['register_time'];
+			$desc=	$row['DESCRIPTION'];
+			$addr=	$row['address'];
+			$priv=	$row['privacy'];
+			echo "
+					<p><span>User Information</span></br>
+						Username: $uname</br>
+						Email: $em</br>
+						Rigister Time: $rtime</br>
+						Description: $desc</br>
+						Address: $addr</br>
+						Privacy: $priv</br>
+					</p>
+				";
 
    		?>
 	</body>
