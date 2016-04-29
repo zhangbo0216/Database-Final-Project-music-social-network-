@@ -27,7 +27,7 @@
    			
    			$c_password = mysqli_fetch_array($result);
    			if ($c_password['username']!=$username)
-   				echo "You enter the Wrong username or password, please check again.";
+   				echo "<h2>You enter the Wrong username or password, please check again.</h2>";
    			else
    			{
    				echo "
@@ -35,15 +35,19 @@
 				<div class='contain'>
    				<div class='main'><form action='edit_profile.php' method='post'>
   					<button class='edit' type='submit' name='username' value=$username><p>My Profile</p></button>
+					<input type='hidden' name='password' value=$password>
   				</form></div>
    				<div class='main'><form action='new_post.php' method='post'>
   					<button class='newpost' type='submit' name='username' value=$username><p>New Post</p></button>
+					<input type='hidden' name='password' value=$password>
   				</form></div>
   				<div class='main'><form action='check_my_post.php' method='post'>
   					<button class='checkpost' type='submit' name='username' value=$username><p>Check My Post</p></button>
+					<input type='hidden' name='password' value=$password>
   				</form></div>
 				<div class='main'><form action='friends.php' method='post'>
   					<button class='friends' type='submit' name='username' value=$username><p>My Friends</p></button>
+					<input type='hidden' name='password' value=$password>
   				</form></div>
 				<div class='searches'>
 				<form action='search.php' method='post'>				
@@ -57,6 +61,7 @@
   						<option value=6>Concert</option>
   					</select><br></div>
   					<h2><button id='sign' type='submit' name='username' value=$username>Search</button></h2>
+					<input type='hidden' name='password' value=$password>
   				</form></div>
 				</div>
   				";

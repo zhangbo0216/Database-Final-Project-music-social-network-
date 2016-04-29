@@ -9,6 +9,7 @@
 	</div>
 		<?php
 			$username=$_POST["username"];
+			$password=$_POST["password"];
 			$content=$_POST["content"];
 			$database=$_POST["database"];
 			$user = 'root';
@@ -27,6 +28,8 @@
    			);
    			if ($database==1)
    			{
+				if(empty($content)==false)
+				{
 				$result = mysqli_query($success,"select title
 				from user_post
 				where (content like '%$content%' or title like '%$content%') and privacy ='public'");
@@ -37,14 +40,20 @@
 					"<div>
 					<form action='view_post.php' method='post'>						
   						<button id='sign' type='submit' name='title' value='$title'>$title</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>
+						<input type='hidden' name='password' value=$password>						
 					</form></div>";
 									
 					echo "<br/>";
 				}
+				}
 			}
 			if ($database==2)
    			{
+				if(empty($content)==false)
+				{
+					
+			
 				$result = mysqli_query($success,"select newsname from news where content like '%$content%' or newsname like '%$content%'");
 		
 				while($row = mysqli_fetch_array($result))
@@ -53,13 +62,16 @@
 					//echo $newsname;					
 					echo "<form action='view_news.php' method='post'>						
   						<button id='sign' type='submit' name='newsname' value='$newsname'>$newsname</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username> 
+						<input type='hidden' name='password' value=$password>
 					</form>";			
 					echo "<br/>";
+				}
 				}
 			}
 			if ($database==3)
    			{
+				if(empty($content)==false){	
 				$result = mysqli_query($success,"select username from fans
 				where username like '%$content%' ");
 				while($row = mysqli_fetch_array($result))
@@ -69,13 +81,16 @@
 					echo 
 					"<form action='view_user.php' method='post'>						
   						<button id='sign' type='submit' name='vuser' value='$uname'>$uname</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>
+						<input type='hidden' name='password' value=$password>
 					</form>";			
 					echo "<br/>";
+				}
 				}
 			}
 			if ($database==4)
    			{
+				if(empty($content)==false){	
 				$result = mysqli_query($success,"select ARTIST_NAME from artist
 				where ARTIST_NAME like '%$content%' ");
 				while($row = mysqli_fetch_array($result))
@@ -84,13 +99,16 @@
 					echo 
 					"<form action='view_artist.php' method='post'>						
   						<button id='sign' type='submit' name='ARTIST_NAME' value='$ARTIST_NAME'>$ARTIST_NAME</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username> 
+						<input type='hidden' name='password' value=$password>
 					</form>";							
 					echo "<br/>";
+				}
 				}
 			}
 			if ($database==5)
    			{
+				if(empty($content)==false){	
 				$result = mysqli_query($success,"select venue_id,venuename
 				from venues
 				where venuename like '%$content%' ");
@@ -101,13 +119,16 @@
 					echo 
 					"<form action='view_venue.php' method='post'>						
   						<button id='sign' type='submit' name='venue_id' value='$venue_id'>$venuename</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>
+						<input type='hidden' name='password' value=$password>						
 					</form>";			
 					echo "<br/>";
+				}
 				}
 			}
 			if ($database==6)
    			{
+				if(empty($content)==false){	
 				$result = mysqli_query($success,"select concert_id, CONCERT_NAME
 				from concerts
 				where CONCERT_NAME like '%$content%' ");
@@ -118,9 +139,11 @@
 					echo 
 					"<form action='view_concert.php' method='post'>						
   						<button id='sign' type='submit' name='concert_id' value='$concert_id'>$CONCERT_NAME</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username> 
+						<input type='hidden' name='password' value=$password>
 					</form>";				
 					echo "<br/>";
+				}
 				}
 			}
 			

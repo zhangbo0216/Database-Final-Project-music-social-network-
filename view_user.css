@@ -36,12 +36,13 @@ p{
 	text-align: center;
 	margin-left:1000px;
 	position:relative;
-	top: 200px;
+	bottom:430px;
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius:40px 40px 40px 40px;
 	background-color:hsla(240, 100%,  20%, 0.4); 
 	width:300px;
 	height:60px;
+	text-align: center;
 }
 
 span {
@@ -65,4 +66,35 @@ span {
 	background-color:hsla(240, 100%,  20%, 0.4); 
 	text-align: center;
 	font-size:40px;
+}
+
+ button { 
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: red;  
+ PADDING: 4px; 
+ WIDTH: 380px; 
+ height: 40px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 18px 18px 18px 18px; 
+ font-size:20px;
+ margin-top:580px;
+ margin-left:390px;
+}
+.ptit{
+		color:yellow;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 25px;
+	text-align: center;
+	margin-left:1100px;
+	margin-top:10px;
+	position:relative;
+	top:10%;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius:40px 40px 40px 40px;
+	background-color:hsla(240, 100%,  20%, 0.4); 
+	width:300px;
+	height:60px;
 }

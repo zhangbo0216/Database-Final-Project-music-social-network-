@@ -12,7 +12,7 @@
 				<th>Username:</th> <td><input type="text" name="username"><br></td>
 			</tr>
 			<tr>
-				<th>Password:</th><td> <input type="pasword" name="password"><br></td>
+				<th>Password:</th><td> <input type="password" name="password"><br></td>
 			</tr>
 			<tr>
 				<th>Email:</th><td> <input type="text" name="email"><br></td>
@@ -52,7 +52,7 @@
 			$host = 'localhost';
 			$port = 3306;
 
-			$link = mysqli_init();
+			//$link = mysqli_init();
 			$success = mysqli_connect(
    			//$link, 
    			$host, 
@@ -60,7 +60,7 @@
    			"", 
    			$db
    			);
-   			$result = mysqli_query($link,"insert into fans (username, email, password, register_time, description, address, privacy) values ('$username', '$email', '$password', CURRENT_TIMESTAMP, '$description', '$address', '$privacy')");
+   			$result = mysqli_query($success,"insert into fans (username, email, password, register_time, description, address, privacy) values ('$username', '$email', '$password', CURRENT_TIMESTAMP, '$description', '$address', '$privacy')");
 
    		?>
 	</body>
