@@ -18,8 +18,16 @@
    			
    			$username=$_POST["username"];
    			$ARTIST_NAME=$_POST["ARTIST_NAME"];
+   			$password=$_POST["password"];
    			
-			//echo $ARTIST_NAME;
+   			
+			echo
+   				"<form action='like_artist.php' method='post'>						
+  				<button type='submit' name='username' value=$username>Like</button> 
+  				<input type='hidden' name='ARTIST_NAME' value=$ARTIST_NAME>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
+			
    			$result = mysqli_query($link,"select * from artist 
    			where ARTIST_NAME='$ARTIST_NAME' ");
    			$row = mysqli_fetch_array($result);

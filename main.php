@@ -29,7 +29,7 @@
   					<button type='submit' name='username' value=$username>Edit My Profile</button>
   					<input type='hidden' name='password' value=$password>  	
   				</form>
-   				<form action='new_post.php' method='post'>
+   				<form action='add_location.php' method='post'>
   					<button type='submit' name='username' value=$username>New Post</button>
   					<input type='hidden' name='password' value=$password>
   				</form>

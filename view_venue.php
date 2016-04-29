@@ -18,7 +18,15 @@
    			
    			$username=$_POST["username"];
    			$venue_id=$_POST["venue_id"];
-
+			$password=$_POST["password"];
+			
+			echo
+   				"<form action='like_venue.php' method='post'>						
+  				<button type='submit' name='username' value=$username>Like</button> 
+  				<input type='hidden' name='venue_id' value=$venue_id>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
+			
    			$result = mysqli_query($link,"select * from venues
    			where venue_id='$venue_id' ");
    			$row = mysqli_fetch_array($result);
