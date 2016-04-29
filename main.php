@@ -27,15 +27,19 @@
    				echo "
    				<form action='edit_profile.php' method='post'>
   					<button type='submit' name='username' value=$username>Edit My Profile</button>
+  					<input type='hidden' name='password' value=$password>  	
   				</form>
    				<form action='new_post.php' method='post'>
   					<button type='submit' name='username' value=$username>New Post</button>
+  					<input type='hidden' name='password' value=$password>
   				</form>
   				<form action='check_my_post.php' method='post'>
   					<button type='submit' name='username' value=$username>Check My Post</button>
+  					<input type='hidden' name='password' value=$password>
   				</form>
   				<form action='friends.php' method='post'>
   					<button type='submit' name='username' value=$username>My Friends</button>
+  					<input type='hidden' name='password' value=$password>
   				</form>
   				<form action='search.php' method='post'>				
   					<input type='text' name='content'>
@@ -48,6 +52,7 @@
   						<option value=6>Concert</option>
   					</select><br>
   					<button type='submit' name='username' value=$username>Search</button>
+  					<input type='hidden' name='password' value=$password>
   				</form>
   				";
    			}

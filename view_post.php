@@ -31,8 +31,21 @@
    				$result = mysqli_query($link,"select * from user_post 
    				where title='$title' ");
    				$row = mysqli_fetch_array($result);
-				echo $row["title"],$row["author"],$row["content"];
+				echo $row["title"],$row["author"],$row["content"],$row["post_time"];
+				$video_url=$row['video'];
+				$photo_url=$row['photo'];
+				echo"<video src='$video_url' width='560' height='315'></video>";
+				echo"<image src='$photo_url' width='560' height='315'></image>";
+				
+				$author=$row["author"];
+				$post_time=$row["post_time"];
+				$result = mysqli_query($link,"select * from post_comments 
+   				where to_username='$author' and post_time='$post_time' ");
+				$row = mysqli_fetch_array($result);
+				echo $row['from_username'],$row['comment_time'],$row['content'];
    			}
+   			
+   			
 		
 		?>
 	</body>

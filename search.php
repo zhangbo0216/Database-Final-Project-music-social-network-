@@ -2,6 +2,7 @@
 	<body>
 		<?php
 			$username=$_POST["username"];
+			$password=$_POST["password"];
 			$content=$_POST["content"];
 			$database=$_POST["database"];
 			$user = 'root';
@@ -29,7 +30,8 @@
 					echo 
 					"<form action='view_post.php' method='post'>						
   						<button type='submit' name='title' value=$title>$title</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>  		
+  						<input type='hidden' name='password' value=$password>				 						 
 					</form>";			
 					echo "<br/>";
 				}
@@ -42,7 +44,8 @@
 					$newsname=$row['newsname'];		
 					echo "<form action='view_news.php' method='post'>						
   						<button type='submit' name='newsname' value=$newsname>$newsname</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>  		
+  						<input type='hidden' name='password' value=$password>				 						 
 					</form>";	
 					echo "<br/>";
 				}
@@ -58,7 +61,8 @@
 					echo 
 					"<form action='view_user.php' method='post'>						
   						<button type='submit' name='vuser' value=$uname>$uname</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>  	
+  						<input type='hidden' name='password' value=$password>					 						 
 					</form>";			
 					echo "<br/>";
 				}
@@ -73,7 +77,8 @@
 					echo 
 					"<form action='view_artist.php' method='post'>						
   						<button type='submit' name='ARTIST_NAME' value=$ARTIST_NAME>$ARTIST_NAME</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>  		
+  						<input type='hidden' name='password' value=$password>				 						 
 					</form>";				
 					echo "<br/>";
 				}
@@ -90,7 +95,8 @@
 					echo 
 					"<form action='view_venue.php' method='post'>						
   						<button type='submit' name='venue_id' value=$venue_id>$venuename</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>  	
+  						<input type='hidden' name='password' value=$password>					 						 
 					</form>";		
 					echo "<br/>";
 				}
@@ -107,7 +113,8 @@
 					echo 
 					"<form action='view_concert.php' method='post'>						
   						<button type='submit' name='concert_id' value=$concert_id>$CONCERT_NAME</button> 
-  						<input type='hidden' name='username' value=$username>  						 						 
+  						<input type='hidden' name='username' value=$username>  
+  						<input type='hidden' name='password' value=$password>						 						 
 					</form>";				
 					echo "<br/>";
 				}
