@@ -41,6 +41,10 @@
   					<button type='submit' name='username' value=$username>My Friends</button>
   					<input type='hidden' name='password' value=$password>
   				</form>
+  				<form action='like.php' method='post'>
+  					<button type='submit' name='username' value=$username>My Friends</button>
+  					<input type='hidden' name='password' value=$password>
+  				</form>
   				<form action='search.php' method='post'>				
   					<input type='text' name='content'>
   					<select type='text' name='database'>
