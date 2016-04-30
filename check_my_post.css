@@ -2,3 +2,47 @@ body{
 	background-image:url("http://www.musicmarketing360.com/wp-content/uploads/2015/08/how-to-promote-your-music-with-instagram-concert.jpg");
 	background-size:cover;
 }
+
+.header h1 {
+	font-size: 30px;
+  font-family: Impact, Charcoal, sans-serif;
+  color:red;
+	margin:auto;
+}
+
+ #sign { 
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: blue;  
+ margin:auto;
+ PADDING: 4px; 
+ WIDTH: 380px; 
+ height: 40px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 18px 18px 18px 18px; 
+ font-size:20px;
+}
+ h2{
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+button
+{
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: orange; 
+ PADDING: 4px; 
+ WIDTH: 190px; 
+ height: 50px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 4px 4px 4px 4px; 
+ font-size:26px;
+margin:auto;
+}

@@ -47,7 +47,7 @@
 						<span>Titile: </span>$ti 
 						 <span>Author: </span>$au 
 						 <span>Post Time: </span>$ptime</br>
-						<span>Content: </span>$con</br>
+						<span>Content:</br> </span>$con</br>
 						<video src='$video_url' width='560' height='415'></video></br>	
 						<image id='img' src='$photo_url' width='560' height='415'></image>
 						</p>
@@ -62,7 +62,7 @@
    				where to_username='$author' and post_time='$post_time' ");
 				$row = mysqli_fetch_array($result);
 				$funame=$row['from_username'];
-				$ctime=$r;ow['comment_time'];
+				$ctime=$row['comment_time'];
 				$con=$row['content'];
 				echo "
 					

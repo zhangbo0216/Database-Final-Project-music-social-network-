@@ -1,5 +1,5 @@
 body{
-	background-image:url("https://www3.ebu.ch/files/live/sites/ebu/files/Trainings/Academy/Courses/2015/IMG/IMG2-social-media-and-music.png");
+	background-image:url("http://79.170.44.211/baroccobarandbistro.com/wp-content/uploads/2015/05/live_with_music_wallpapers_hd_25_backgrounds_wus.jpg");
 	background-size:cover;
 }
 
@@ -11,7 +11,7 @@ body{
 }
 
 p{
-	color:blue;
+	color:yellow;
 	padding-top:70px;
 	padding-bottom:30px;
 	padding-left:70px;
@@ -20,11 +20,21 @@ p{
 	font-size: 25px;
 	position: absolute;
 	top: 2px;
-	left: 25%;
+	left: 20%;
 	text-align: center;
+	width:1400px;
+	height:1400px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius:40px 40px 40px 40px;
+	background-color:hsla(240, 100%,  20%, 0.4); 
+	padding-top:70px;
+	padding-bottom:30px;
+	padding-left:20px;
+	padding-right:20px;
+
 }
 
 
 span{
-	color:green;
+	color:orange;
 }

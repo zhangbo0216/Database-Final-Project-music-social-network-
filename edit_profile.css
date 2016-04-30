@@ -108,3 +108,23 @@ span {
 	top: 1%;
 	left: 15%;
 }
+
+button
+{
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: orange; 
+ margin-left: 500px;
+ margin-bottom: 300px;
+ position: absolute;
+	top: 58%;
+left: 60.5%;
+ PADDING: 4px; 
+ WIDTH: 190px; 
+ height: 50px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 4px 4px 4px 4px; 
+ font-size:26px;
+}

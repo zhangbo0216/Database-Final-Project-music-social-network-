@@ -1,5 +1,5 @@
 body{
-	background-image:url("http://www.musicmarketing360.com/wp-content/uploads/2015/08/how-to-promote-your-music-with-instagram-concert.jpg");
+	background-image:url("https://www3.ebu.ch/files/live/sites/ebu/files/Trainings/Academy/Courses/2015/IMG/IMG2-social-media-and-music.png");
 	background-size:cover;
 }
 
@@ -10,20 +10,7 @@ body{
 	margin:auto;
 }
 
-h2{
-	color: black;
-	text-align: center;
-	font-weight: bold;
-	font-family: "Comic Sans MS", cursive, sans-serif
-}
-
-h3{
-		color: black;
-	text-align: center;
-	font-family: "Comic Sans MS", cursive, sans-serif
-}
-
-#sign { 
+ #sign { 
  BORDER: 1px solid; 
  LINE-HEIGHT: 20px; 
  BACKGROUND-COLOR: orange;  
@@ -36,4 +23,10 @@ h3{
  CURSOR: pointer; 
  border-radius: 18px 18px 18px 18px; 
  font-size:20px;
+}
+ h2{
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Comic Sans MS", cursive, sans-serif
 }
