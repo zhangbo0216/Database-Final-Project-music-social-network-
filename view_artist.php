@@ -27,6 +27,12 @@
   				<input type='hidden' name='ARTIST_NAME' value=$ARTIST_NAME>  
   				<input type='hidden' name='password' value=$password>						 						 
 				</form>";
+			echo
+   				"<form action='dislike_artist.php' method='post'>						
+  				<button type='submit' name='username' value=$username>Dislike</button> 
+  				<input type='hidden' name='ARTIST_NAME' value=$ARTIST_NAME>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
 			
    			$result = mysqli_query($link,"select * from artist 
    			where ARTIST_NAME='$ARTIST_NAME' ");

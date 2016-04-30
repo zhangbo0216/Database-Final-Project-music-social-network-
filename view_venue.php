@@ -26,6 +26,12 @@
   				<input type='hidden' name='venue_id' value=$venue_id>  
   				<input type='hidden' name='password' value=$password>						 						 
 				</form>";
+			echo
+   				"<form action='dislike_venue.php' method='post'>						
+  				<button type='submit' name='username' value=$username>Dislike</button> 
+  				<input type='hidden' name='venue_id' value=$venue_id>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
 			
    			$result = mysqli_query($link,"select * from venues
    			where venue_id='$venue_id' ");

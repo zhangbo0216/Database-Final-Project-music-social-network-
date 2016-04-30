@@ -36,6 +36,13 @@
 				$photo_url=$row['photo'];
 				echo"<video src='$video_url' width='560' height='315'></video>";
 				echo"<image src='$photo_url' width='560' height='315'></image>";
+				$location=$row['location'];
+				$map_url="https://maps.googleapis.com/maps/api/staticmap?
+				center=$location&zoom=13&size=600x300&
+				maptype=roadmap&markers=color:blue%7Clabel:S%7C$location"
+				echo"<image src='$map_url' width='560' height='315'></image>";
+				
+				
 				
 				$author=$row["author"];
 				$post_time=$row["post_time"];
@@ -43,6 +50,8 @@
    				where to_username='$author' and post_time='$post_time' ");
 				$row = mysqli_fetch_array($result);
 				echo $row['from_username'],$row['comment_time'],$row['content'];
+				
+				
    			}
    			
    			

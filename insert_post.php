@@ -7,7 +7,18 @@
 			$video=$_POST["video"];
 			$location=$_POST["location"];
 			$privacy=$_POST["privacy"];
-			echo $username,$password,$location;
+			$location=substr($location,1,-1);
+			echo $username,$password,$location,gettype($location),$title;
+		
+			
+			echo "You just posted something new!!!";
+			echo "
+   				<form action='main.php' method='post'>
+				<button type='submit' name='username' value=$username>back</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+   				";
+			
 			$user = 'root';
 			$lpassword = 'root';
 			$db = 'music_social';
