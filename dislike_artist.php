@@ -1,3 +1,10 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="friend_request.css"/>
+		<title>view artist</title>
+	</head>
+	<body>
+	<div class="header"><h1>M&Z's Music Fun Social Network</h1></div>
 <?php
 						
 			$username=$_POST["username"];
@@ -18,9 +25,9 @@
    			$user, 
    			"", 
    			$db);
-   			$result=mysqli_query($success,"delete from like_artist where (fans = '$username' and artist = '$$ARTIST_NAME');");
-   			
-   			echo "Congratudlation! You dislike $ARTIST_NAME";
+   			$result=mysqli_query($success,"delete from like_artist where (fans = '$username' and artist = '$ARTIST_NAME');");
+   			echo $ARTIST_NAME;
+   			echo "<h2>You dislike $ARTIST_NAME now</h2>";
    			echo "
    				<form action='main.php' method='post'>
 				<button type='submit' name='username' value=$username>back</button> 
@@ -28,3 +35,5 @@
 				</form>
    				"
 ?>
+</body>
+</html>

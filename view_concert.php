@@ -23,6 +23,7 @@
    			);
    			
    			$username=$_POST["username"];
+			$password=$_POST["password"];
    			$concert_id=$_POST["concert_id"];
    			
    			$result = mysqli_query($success,"select * from concerts join venues join line_up on concerts.venue_id=venues.venue_id and concerts.concert_id=line_up.concert_id 
@@ -46,6 +47,12 @@
 						<span>Description:</span> $desc</br>
 					</p>
 			";
+													echo "
+   				<form action='main.php' method='post'>
+				<button id='back' type='submit' name='username' value=$username>back</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+   				";
 		
 		?>
 	</body>

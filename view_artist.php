@@ -28,14 +28,14 @@
    			echo
    				"<form action='like_artist.php' method='post'>						
   				<button id='sign' type='submit' name='username' value=$username>Like</button> 
-  				<input type='hidden' name='ARTIST_NAME' value=$ARTIST_NAME>  
+  				<input type='hidden' name='ARTIST_NAME' value='$ARTIST_NAME'>  
   				<input type='hidden' name='password' value=$password>						 						 
 				</form>";
 				
 			echo
    				"<form action='dislike_artist.php' method='post'>						
   				<button id='sign' type='submit' name='username' value=$username>Dislike</button> 
-  				<input type='hidden' name='ARTIST_NAME' value=$ARTIST_NAME>  
+  				<input type='hidden' name='ARTIST_NAME' value='$ARTIST_NAME'>  
   				<input type='hidden' name='password' value=$password>						 						 
 				</form>";
 			//echo $ARTIST_NAME;

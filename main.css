@@ -125,3 +125,20 @@ select{
 h2{
 	padding-bottom:2px;
 }
+
+#out
+{
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: red; 
+
+ margin: auto;
+
+ PADDING: 4px; 
+ WIDTH: 190px; 
+ height: 40px;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 4px 4px 4px 4px; 
+ font-size:22px;
+}

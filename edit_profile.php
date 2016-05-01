@@ -21,14 +21,14 @@
 			</select><br>
 			</div>
 			<input type='hidden' name='username' value="<?php echo $_POST['username'];?>" > 
+			<input type='hidden' name='password' value="<?php echo $_POST['password'];?>" > 
 			<div class="edit_button"><input id="sign" type="submit" value="edit"></div>
 		</form>
 		</div>
 		<?php
 			$username=$_POST['username'];
 			$password=$_POST["password"];
-			$content=$_POST['content'];
-			$attribute=$_POST['attribute'];
+			
 			$user = 'root';
 			$lpassword = 'root';
 			$db = 'music_social';
@@ -43,7 +43,11 @@
    			"", 
    			$db
    			);
-   			$result=mysqli_query($success, "update fans set $attribute = '$content' where username = '$username'");
+   			if(isset($_POST['content']))
+			{$content=$_POST['content'];
+			$attribute=$_POST['attribute'];
+			$result=mysqli_query($success, "update fans set $attribute = '$content' where username = '$username'");
+			}
 			$result=mysqli_query($success, "select * from fans where username = '$username'");
 			
 			$row = mysqli_fetch_array($result);

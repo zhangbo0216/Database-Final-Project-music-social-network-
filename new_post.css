@@ -77,6 +77,13 @@ select{
 	font-family: "Comic Sans MS", cursive, sans-serif
 }
 
+#err{
+		color: black;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
 #context
 {
 	border: 1px solid;
@@ -105,4 +112,17 @@ left: 16%;
  border-radius: 4px 4px 4px 4px; 
  font-size:26px;
 }
-
+#back { 
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: red;  
+ PADDING: 4px; 
+ WIDTH: 380px; 
+ height: 40px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 18px 18px 18px 18px; 
+ font-size:20px;
+margin-left: 450px;
+}

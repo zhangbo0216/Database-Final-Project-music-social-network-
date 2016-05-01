@@ -44,7 +44,7 @@
     				$ARTIST_NAME=$row['artist'];
 					echo 
 					"<form action='view_artist.php' method='post'>						
-  						<button id='sign' type='submit' name='ARTIST_NAME' value=$ARTIST_NAME>$ARTIST_NAME</button> 
+  						<button id='sign' type='submit' name='ARTIST_NAME' value='$ARTIST_NAME'>$ARTIST_NAME</button> 
   						<input type='hidden' name='username' value=$username>  	
   						<input type='hidden' name='password' value=$password>					 						 
 					</form>";

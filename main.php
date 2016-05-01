@@ -6,6 +6,10 @@
 	</head>
 	<body>
 	<div class="header"><h1>M&Z's Music Fun Social Network</h1></div>
+	<form action='sign_in.html' method='post'>
+				<input id="out" type="submit" value="Log Out"></button> 
+
+				</form>
 		<?php
 			$username=$_POST["username"];
 			$password=$_POST["password"];
