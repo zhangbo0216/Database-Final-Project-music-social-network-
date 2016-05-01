@@ -1,3 +1,12 @@
+<!doctype html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="friends.css"/>
+		<title>friend request</title>
+	</head>
+	<body>
+		<div class="header"><h1>M&Z's Music Fun Social Network</h1>
+
 <?php
 			if (isset($_POST["username"])){
 			$username=$_POST["username"];
@@ -26,5 +35,14 @@
    			);
    			$result = mysqli_query($success,"insert into fans (username, email, password, register_time, description, address, privacy) values ('$username', '$email', '$password', CURRENT_TIMESTAMP, '$description', '$address', '$privacy')");
 			}
-			echo "success";
+			echo "<h2>success</h2>";
+			echo "
+   				<form action='sign_in.html' method='post'>
+				<button id='sign' type='submit' name='username' value=$username>Continue</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+   				";
    		?>
+		
+		</body>
+<html>

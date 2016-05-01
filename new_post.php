@@ -6,7 +6,7 @@
 	<body>
 		<div class="header"><h1>M&Z's Music Fun Social Network</h1></div>
 		<div class="log_in">
-		<form action="insert_post.php" method="post" enctype="multipart/form-data">
+			<form action="insert_post.php" method="post" enctype="multipart/form-data">
 				<h2>what are you thinking today?</h2>
 			<table>
 			<tr>

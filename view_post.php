@@ -55,7 +55,7 @@
 						<span>Content:</br> </span>$con</br>
 						<video src='$video_url' width='560' height='415'></video></br>	
 						<image id='img' src='$photo_url' width='560' height='415'></image></br>
-						<image src='$map_url' width='560' height='315'></image>
+						<image src='$map_url' width='560' height='415'></image>
 						</p>
 						</div>
 

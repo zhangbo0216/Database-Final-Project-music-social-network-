@@ -1,3 +1,12 @@
+<!doctype html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="friends.css"/>
+		<title>friend request</title>
+	</head>
+	<body>
+		<div class="header"><h1>M&Z's Music Fun Social Network</h1>
+
 <?php		
 			$user1=$_POST["user1"];		
 			$user2=$_POST["user2"];
@@ -16,11 +25,13 @@
    			$db);
    			$result=mysqli_query($success,"update like_fans set friend_time = CURRENT_TIMESTAMP where fans1 = '$user1' and fans2 = '$user2';");
    			
-   			echo "Congratudlation! You have accepted the friend request from $user2";
+   			echo "<h2>Congratudlation! You have accepted the friend request from $user2</h2>";
    			echo "
    				<form action='main.php' method='post'>
-				<button type='submit' name='username' value=$user2>back</button> 
+				<button id='sign' type='submit' name='username' value=$user2>back</button> 
 				<input type='hidden' name='password' value=$password>
 				</form>
-   				"
+   				";
 ?>
+</body>
+<html>

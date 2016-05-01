@@ -1,3 +1,11 @@
+<!doctype html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="friends.css"/>
+		<title>friend request</title>
+	</head>
+	<body>
+		<div class="header"><h1>M&Z's Music Fun Social Network</h1>
 <?php
 			$user = 'root';
 			$lpassword = 'root';
@@ -43,3 +51,5 @@
 				</form>
    				"
 ?>
+	</body>
+</html>

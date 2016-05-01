@@ -51,7 +51,7 @@
 				$ti=$row["title"];
 				echo "<div class='tit'>
 						<form action='view_post.php' method='post'>
-					<button  type='submit' name='username' value=$username>$ti</button> 
+					<button id='ti' type='submit' name='username' value=$username>$ti</button> 
 					<input type='hidden' name='password' value=$password>
 					<input type='hidden' name='title' value='$ti'>
 					</form>
@@ -113,7 +113,7 @@
 					echo "
 					<div class='tit'>
 					<form action='view_post.php' method='post'>
-					<button id='bu' type='submit' name='username' value=$username>$ti</button> 
+					<button id='ti' type='submit' name='username' value=$username>$ti</button> 
 					<input type='hidden' name='password' value=$password>
 					<input type='hidden' name='title' value='$ti'>
 					</form>

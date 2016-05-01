@@ -32,7 +32,7 @@
 				<button id='sign' type='submit' name='username' value=$user1>back</button> 
 				<input type='hidden' name='password' value=$password>
 				</form>
-   				"
+   				";
 ?>
 </body>
 <html>
