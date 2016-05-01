@@ -27,14 +27,60 @@ p{
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius:40px 40px 40px 40px;
 	background-color:hsla(240, 100%,  20%, 0.4); 
-	padding-top:70px;
-	padding-bottom:30px;
-	padding-left:20px;
-	padding-right:20px;
-
 }
 
 
 span{
 	color:orange;
+}
+
+button
+{
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: orange; 
+
+ margin-bottom: 300px;
+ position: absolute;
+	top: 6%;
+left: 10%;
+ PADDING: 4px; 
+ WIDTH: 190px; 
+ height: 50px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 4px 4px 4px 4px; 
+ font-size:26px;
+}
+
+.comment{
+	border: 1px solid;
+	border-radius: 4px;
+	width:500px;
+	height:50px;
+	background-color:hsla(120, 100%, 20%, 0.4);
+	color: yellow;
+	font-size:20px;
+	position:relative;
+	top:1100px;
+	left:600px;
+}
+#show_comm{
+	color:yellow;
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-left:70px;
+	padding-right:20px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 25px;
+	text-align: left;
+	width:280px;
+	height:50px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius:40px 40px 40px 40px;
+	background-color:hsla(240, 100%,  20%, 0.4); 
+	position: relative;
+    left:10px;
+	top:50px;
 }

@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="view_venue.css"/>
@@ -24,9 +25,21 @@
    			
    			$username=$_POST["username"];
    			$venue_id=$_POST["venue_id"];
-
-   			$result = mysqli_query($success,"select * from venues
-   			where venue_id='$venue_id' ");
+			$password=$_POST["password"];
+			echo
+   				"<form action='like_venue.php' method='post'>						
+  				<button id='sign' type='submit' name='username' value=$username>Like</button> 
+  				<input type='hidden' name='venue_id' value=$venue_id>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
+			echo
+   				"<form action='dislike_venue.php' method='post'>						
+  				<button id='sign' type='submit' name='username' value=$username>Dislike</button> 
+  				<input type='hidden' name='venue_id' value=$venue_id>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
+   			$result = mysqli_query($success, "select * from venues where venue_id='$venue_id' ");
+			
    			$row = mysqli_fetch_array($result);
 			$vname= $row["venuename"];
 			$addr=$row["address"];
@@ -38,6 +51,13 @@
 						<span>Description:</span> $desc</br>
 					</p>
 			";
+			
+										echo "
+   				<form action='main.php' method='post'>
+				<button id='back' type='submit' name='username' value=$username>back</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+   				";
 		
 		?>
 	</body>

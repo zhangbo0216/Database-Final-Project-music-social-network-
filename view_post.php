@@ -21,6 +21,7 @@
    			$db);
    			
    			$username=$_POST["username"];
+			$password=$_POST["password"];
    			$title=$_POST["title"];
    			
 			
@@ -30,7 +31,7 @@
    			$privacy=mysqli_fetch_array($result)["privacy"];
 
    			
-   			if (strcmp($privacy,"public")==0)
+   			
    			{
    				$result = mysqli_query($success,"select * from user_post 
    				where title='$title' ");
@@ -41,6 +42,10 @@
 				$au=$row["author"];
 				$con=$row["content"];
 				$ptime=$row["post_time"];
+				$location=$row['location'];
+				$map_url="https://maps.googleapis.com/maps/api/staticmap?
+				center=$location&zoom=13&size=600x300&
+				maptype=roadmap&markers=color:blue%7Clabel:S%7C$location";
 				echo"
 				<div>
 					<p>
@@ -49,24 +54,48 @@
 						 <span>Post Time: </span>$ptime</br>
 						<span>Content:</br> </span>$con</br>
 						<video src='$video_url' width='560' height='415'></video></br>	
-						<image id='img' src='$photo_url' width='560' height='415'></image>
+						<image id='img' src='$photo_url' width='560' height='415'></image></br>
+						<image src='$map_url' width='560' height='315'></image>
 						</p>
 						</div>
 
 					";
-					
-				
+
+				//echo"";
 				$author=$row["author"];
 				$post_time=$row["post_time"];
 				$result = mysqli_query($success,"select * from post_comments 
    				where to_username='$author' and post_time='$post_time' ");
-				$row = mysqli_fetch_array($result);
+				while($row = mysqli_fetch_array($result)){
 				$funame=$row['from_username'];
 				$ctime=$row['comment_time'];
 				$con=$row['content'];
 				echo "
-					
+					<p id='show_comm'>$funame:$con </br>$ctime</p>
+				";}
+				
+				
+				echo"
+					<div class='comments'>
+					<form action='new_comment.php' method='post'>
+					<input class='comment' type='text' name='content' >
+					<input class='comment' type='submit' value='new_comment'>
+					<input type='hidden' name='post_time' value='$ptime'>
+					<input type='hidden' name='author' value=$au>
+					<input type='hidden' name='username' value=$username>
+					<input type='hidden' name='password' value=$password>
+					</form>
+					<div>
 				";
+				
+				echo "
+				<div class='back'>
+   				<form action='main.php' method='post'>
+				<button type='submit' name='username' value=$username>back</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+				</div>
+   				";
    			}
 		
 		?>

@@ -37,7 +37,7 @@
   					<button class='edit' type='submit' name='username' value=$username><p>My Profile</p></button>
 					<input type='hidden' name='password' value=$password>
   				</form></div>
-   				<div class='main'><form action='new_post.php' method='post'>
+   				<div class='main'><form action='add_location.php' method='post'>
   					<button class='newpost' type='submit' name='username' value=$username><p>New Post</p></button>
 					<input type='hidden' name='password' value=$password>
   				</form></div>
@@ -48,6 +48,10 @@
 				<div class='main'><form action='friends.php' method='post'>
   					<button class='friends' type='submit' name='username' value=$username><p>My Friends</p></button>
 					<input type='hidden' name='password' value=$password>
+  				</form></div>
+				<div class='main'><form action='like.php' method='post'>
+  					<button class='like' type='submit' name='username' value=$username><p>Favorate Things</p></button>
+  					<input type='hidden' name='password' value=$password>
   				</form></div>
 				<div class='searches'>
 				<form action='search.php' method='post'>				

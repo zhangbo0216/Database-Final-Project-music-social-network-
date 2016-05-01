@@ -24,7 +24,20 @@
    			
    			$username=$_POST["username"];
    			$ARTIST_NAME=$_POST["ARTIST_NAME"];
-   			
+			$password=$_POST["password"];
+   			echo
+   				"<form action='like_artist.php' method='post'>						
+  				<button id='sign' type='submit' name='username' value=$username>Like</button> 
+  				<input type='hidden' name='ARTIST_NAME' value=$ARTIST_NAME>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
+				
+			echo
+   				"<form action='dislike_artist.php' method='post'>						
+  				<button id='sign' type='submit' name='username' value=$username>Dislike</button> 
+  				<input type='hidden' name='ARTIST_NAME' value=$ARTIST_NAME>  
+  				<input type='hidden' name='password' value=$password>						 						 
+				</form>";
 			//echo $ARTIST_NAME;
    			$result = mysqli_query($success,"select * from artist 
    			where ARTIST_NAME='$ARTIST_NAME' ");
@@ -39,6 +52,12 @@
 						<span>Description:</span> $desc</br>
 					</p>
 			";
+							echo "
+   				<form action='main.php' method='post'>
+				<button id='back' type='submit' name='username' value=$username>back</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+   				";
 		
 		?>
 	</body>

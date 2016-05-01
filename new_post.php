@@ -6,7 +6,7 @@
 	<body>
 		<div class="header"><h1>M&Z's Music Fun Social Network</h1></div>
 		<div class="log_in">
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+				<form action="insert_post.php" method="post">
 				<h2>what are you thinking today?</h2>
 			<table>
 			<tr>
@@ -15,15 +15,7 @@
 			<tr>
 				<th>Content:</th><td><textarea id="context" cols="30" rows="3" name="content"></textarea><br></td>
 			</tr>
-			<tr>
-				<th>Photo:</th><td> <input type="text" name="photo"><br></td>
-			</tr>
-			<tr>
-				<th>Video:</th><td> <input type="text" name="video"><br></td>
-			</tr>
-			<tr>
-				<th>Location:</th><td> <input type="text" name="location"><br></td>
-			</tr>
+		
 			<tr>
 				<th>Privacy: </th>
 				<td><select type="text" name="privacy">
@@ -33,45 +25,20 @@
 				</select><br></td>
 			</tr>
 			<tr>
-				<td><input type='hidden' name='username' value="<?php echo $_POST['username'];?>" ></td>
+				<td><input type='hidden' name='username' value="<?php echo $_POST['username'];?>" >
+					<input type='hidden' name='password' value="<?php echo $_POST['password'];?>" >
+					<input type='hidden' name='location' value="<?php 
+						if (isset($_POST['location'])) echo $_POST['location'];
+						else echo null;
+					?>" ></td>
 			</tr>
+			<tr>
+			<th>Video:</th><td> <input type="file" name="vfile"/></td></tr>
+			<tr><th>Photo:</th><td> <input type="file" name="pfile"/></td></tr>
 			</table>
-			<p><input id="sign" type="submit" value="post"></p>
+			<p><input  type="submit" name="submit" value="post"/></p>
 		</form>
 		</div>
-		<?php
-			if ($_SERVER["REQUEST_METHOD"] == "POST") 
-			{
-				$username=$_POST['username'];
-				if(isset($_POST['title']))
-				{
-					if(empty($_POST['title'])==False)
-					{
-						$title=$_POST['title'];
-						//echo $title;
-						$content=$_POST['content'];
-						$photo=$_POST['photo'];
-						$video=$_POST['video'];
-						$location=$_POST['location'];
-						$privacy=$_POST['privacy'];
-						$user = 'root';
-						$lpassword = '';
-						$db = 'music_social';
-						$host = 'localhost';
-						$port = 3306;
-
-						//$link = mysqli_init();
-						$success = mysqli_connect(
-						//$link, 
-						$host, 
-						$user, 
-						"", 
-						$db
-						);
-						$result=mysqli_query($success,"Insert into user_post (author, content, photo, video, title, location, post_time, privacy) values('$username', '$content', '$photo', '$video', '$title', '$location', CURRENT_TIMESTAMP,'$privacy')");
-					}
-				}
-			}
-   		?>
+		
 	</body>
 </html> 

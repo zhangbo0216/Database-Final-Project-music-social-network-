@@ -1,0 +1,28 @@
+body{
+	background-image:url("http://www.musicmarketing360.com/wp-content/uploads/2015/08/how-to-promote-your-music-with-instagram-concert.jpg");
+	background-size:cover;
+}
+
+
+.header h1 {
+	font-size: 30px;
+  font-family: Impact, Charcoal, sans-serif;
+  color:red;
+margin:auto;}
+
+ #sign { 
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: orange; 
+ MARGIN:auto; 
+ PADDING: 4px; 
+ WIDTH: 390px; 
+ height: 50px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 18px 18px 18px 18px; 
+ font-size:26px;
+ position:relative;
+ top: 500px;
+}

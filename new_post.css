@@ -14,7 +14,7 @@ body{
 	top: 20%;
 	left: 35%;
 	margin: 20px 0 0 -10px;
-	width:400px;
+	width:600px;
 	height:400px;
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius:40px 40px 40px 40px;
@@ -44,11 +44,12 @@ color:yellow;
  MARGIN:auto; 
  PADDING: 4px; 
  WIDTH: 190px; 
+ height: 40px;
  DISPLAY: block;  
  COLOR: #ffffff; 
  CURSOR: pointer; 
  border-radius: 4px 4px 4px 4px; 
- font-size:20px;
+ font-size:22px;
 }
 
 input{
@@ -85,3 +86,23 @@ select{
 	color: yellow;
 	font-size:17px;
 }
+button
+{
+ BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: orange; 
+ margin-left: 500px;
+ margin-bottom: 300px;
+ position: absolute;
+	top: 60%;
+left: 16%;
+ PADDING: 4px; 
+ WIDTH: 190px; 
+ height: 50px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 4px 4px 4px 4px; 
+ font-size:26px;
+}
+

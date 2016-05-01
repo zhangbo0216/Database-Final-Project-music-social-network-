@@ -8,7 +8,7 @@
 .main{
 	position: relative;
 	margin-top:100px;
-	margin-left:250px;
+	margin-left:150px;
 	display: inline-block;
 }
 
@@ -61,6 +61,15 @@ div p {
 .friends {
 	border: 2px solid cyan;
 	background-color:hsla(180, 100%, 20%, 0.4);
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+.like{
+	border: 2px solid purple;
+	background-color:hsla(60, 100%, 20%, 0.4);
 	height: 200px;
 	width: 200px;
 	border-radius: 100%;

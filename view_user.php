@@ -39,7 +39,7 @@
    			{
    				echo
    					"<form action='unfriend.php' method='post'>						
-  					<button type='submit' name='user1' value=$username>Unfriend</button> 
+  					<button id='bu' type='submit' name='user1' value=$username>Unfriend</button> 
   					<input type='hidden' name='user2' value=$vuser>  
   					<input type='hidden' name='password' value=$password>						 						 
 					</form>";
@@ -50,7 +50,12 @@
 			{
 				$ti=$row["title"];
 				echo "<div class='tit'>
-						$ti</br>
+						<form action='view_post.php' method='post'>
+					<button  type='submit' name='username' value=$username>$ti</button> 
+					<input type='hidden' name='password' value=$password>
+					<input type='hidden' name='title' value='$ti'>
+					</form>
+						</br>
 						</div>";
 			}
 			
@@ -79,6 +84,12 @@
 						Address: $addr</br>
 					</p>
 				";
+				echo "
+   				<form action='main.php' method='post'>
+				<button id='back' type='submit' name='username' value=$username>back</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+   				";
    			}
 		}
 		else
@@ -87,7 +98,7 @@
    				
    				echo
    					"<form action='friend_request.php' method='post'>						
-  					<button type='submit' name='user1' value=$username>Add Friend</button> 
+  					<button id='bu' type='submit' name='user1' value=$username>Add Friend</button> 
   					<input type='hidden' name='user2' value=$vuser>  
   					<input type='hidden' name='password' value=$password>						 						 
 					</form>";
@@ -99,8 +110,14 @@
 				{
 
 					$ti=$row["title"];
-					echo "<div class='tit'>
-						$ti</br>
+					echo "
+					<div class='tit'>
+					<form action='view_post.php' method='post'>
+					<button id='bu' type='submit' name='username' value=$username>$ti</button> 
+					<input type='hidden' name='password' value=$password>
+					<input type='hidden' name='title' value='$ti'>
+					</form>
+						</br>
 						</div>";
 				}
 			
@@ -133,6 +150,12 @@
 						Address: $addr</br>
 					</p>
 				";
+				echo "
+   				<form action='main.php' method='post'>
+				<button id='back' type='submit' name='username' value=$username>back</button> 
+				<input type='hidden' name='password' value=$password>
+				</form>
+   				";
    				}
 			}
 		?>
