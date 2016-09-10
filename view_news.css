@@ -28,3 +28,20 @@ p{
 	left: 15%;
 	text-align: left;
 }
+
+button
+{
+  BORDER: 1px solid; 
+ LINE-HEIGHT: 20px; 
+ BACKGROUND-COLOR: red;  
+ PADDING: 4px; 
+ WIDTH: 380px; 
+ height: 40px;
+ DISPLAY: block;  
+ COLOR: #ffffff; 
+ CURSOR: pointer; 
+ border-radius: 18px 18px 18px 18px; 
+ font-size:20px;
+ margin-top:640px;
+ margin-left:390px;
+}

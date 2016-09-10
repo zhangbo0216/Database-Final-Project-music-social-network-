@@ -23,9 +23,9 @@
    			$user, 
    			"", 
    			$db);
-   			$result=mysqli_query($success,"update like_fans set friend_time = CURRENT_TIMESTAMP where fans1 = '$user1' and fans2 = '$user2';");
+   			$result=mysqli_query($success,"delete from like_fans where fans1 = '$user1' and friend_time='0000-00-00 00:00:00';");
    			
-   			echo "<h2>Congratudlation! You have accepted the friend request from $user1</h2>";
+   			echo "<h2> You have declined the friend request from $user1</h2>";
    			echo "
    				<form action='main.php' method='post'>
 				<button id='sign' type='submit' name='username' value=$user2>back</button> 
