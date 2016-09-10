@@ -44,26 +44,13 @@
     				$uname=$row['friend'];
     				echo "<h3>$uname</h3>";
 					echo 
-					"
-					<div class='fad'>
-					<form action='friend_accept.php' method='post'>						
+					"<form action='friend_accept.php' method='post'>						
   						<button id='sign' type='submit' name='user1' value=$uname>Accept</button> 
   						<input type='hidden' name='user2' value=$username>  	
   						<input type='hidden' name='password' value=$password>					 						 
-					</form>
-					<form action='friend_decline.php' method='post'>						
-  						<button id='sign' type='submit' name='user1' value=$uname>Decline</button> 
-  						<input type='hidden' name='user2' value=$username>  	
-  						<input type='hidden' name='password' value=$password>					 						 
-					</form>
-					</div>";
+					</form>";
 					echo "<br/>";
    			}
-			   				echo "
-							<form action='main.php' method='post'>
-				<button id='back' type='submit' name='username' value=$username>back</button> 
-				<input type='hidden' name='password' value=$password>
-				</form>";
 		?>
 	</body>
 </html> 

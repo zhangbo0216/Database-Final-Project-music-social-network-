@@ -22,7 +22,6 @@
    			);
    			
    			$username=$_POST["username"];
-			$password=$_POST["password"];
    			$newsname=$_POST["newsname"];
    		
 			
@@ -30,14 +29,8 @@
    			where newsname='$newsname' ");
    			$row = mysqli_fetch_array($result);
 			$con=$row["content"];
-			echo $newsname;
 			echo "<p>$con</p>";
-			echo "
-				   <form action='main.php' method='post'>
-				<button id='back' type='submit' name='username' value=$username>back</button> 
-				<input type='hidden' name='password' value=$password>
-				</form>
-			";
+		
 		?>
 	</body>
 </html> 

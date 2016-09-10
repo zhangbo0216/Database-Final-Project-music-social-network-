@@ -78,7 +78,7 @@
 						
 					}else $video="";
 			
-				$result=mysqli_query($success,"INSERT INTO user_post (author, content, photo, video, title, location, post_time, privacy) VALUES ('".$uname."', '".$content."', '".$photo."', '".$video."', '".$title."', '".$location."', CURRENT_TIMESTAMP, '".$privacy."')");}
+				$result=mysqli_query($success,"INSERT INTO user_post (author, content, photo, video, title, location, post_time, privacy) VALUES ('dabianren', '$content', '$photo', '$video', '$title', '$location', CURRENT_TIMESTAMP, '$privacy')");}
 			}
 			else echo "<h2 id='err'>Title Cannot be Empty</2>
 				   <form action='main.php' method='post'>

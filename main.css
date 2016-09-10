@@ -167,8 +167,8 @@ top:50px;
  LINE-HEIGHT: 20px; 
  BACKGROUND-COLOR: purple; 
 position:relative;
-left:730px;
-top: 170px;
+left:1430px;
+top: -880px;
  PADDING: 4px; 
  WIDTH: 490px; 
  height: 30px;
@@ -182,31 +182,5 @@ h2{
 	color: black;
 	text-align: center;
 	font-weight: bold;
-	font-family: "Comic Sans MS", cursive, sans-serif;
-}
-#sug{
-		color: purple;
-	text-align: center;
-	font-weight: bold;
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	position:absolute;
-left:40%;
-top: 65%;
-font-size:26px;
-	border: 1px solid rgba(0,0,0,0.3);
-	border-radius:40px 40px 40px 40px;
-	background-color:hsla(240, 100%,  20%, 0.4);
-	width:300px;
-}
-
-#fee
-{
-	color: pink;
-	text-align: center;
-	font-weight: bold;
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	position:absolute;
-left:20px;
-top: 450px;
-font-size:26px;
+	font-family: "Comic Sans MS", cursive, sans-serif
 }

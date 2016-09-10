@@ -78,14 +78,13 @@
 					where datediff(curtime(), post_time)<7 and privacy <> 'self'
 						and exists(select fans1 as friend
 						from like_fans
-						where friend_time <> '0000-00-00 00:00:00'  and fans2='$username' and fans1=author
+						where friend_time <> '0000-00-00 00:00:00'  and fans1='$username'
 						union
 						select fans2 as friend
 						from like_fans
-						where friend_time <> '0000-00-00 00:00:00'  and fans1='$username' and fans2=author ) 
+						where friend_time <> '0000-00-00 00:00:00'  and fans2='$username' ) 
 						order by  post_time desc
 				");
-				echo"<h3 id='fee'>New Feed:</h3>";
 				while ($row=mysqli_fetch_array($result))
 				{
 					$author=$row["author"];
@@ -96,47 +95,26 @@
 					<div class='fee'>
 					<form action='view_post.php' method='post'>
 				
-					<button id='feed' type='submit' name='username' value=$username>$author: <strong>$title</strong>, $post_time</button> 
+					<button id='feed' type='submit' name='username' value=$username>$author,$title,$post_time</button> 
 					<input type='hidden' name='password' value=$password>
 					<input type='hidden' name='title' value='$title'>
 					</form>
 					</div>";
-					//echo"$author,$title,$post_time";
 				}
 				$result = mysqli_query($success,"select * from concerts join venues join like_venue  on 
 					concerts.venue_id=venues.venue_id and like_venue.venue_id=venues.venue_id where fans='$username'
  ");
-				echo"<h3 id='sug'>interesting things:</h3>";
 				while ($row=mysqli_fetch_array($result))
 				{
 					$concert_id=$row["concert_id"];
 					$concert_name=$row["CONCERT_NAME"];
 					echo "
-					<div>
+					<div class='sug'>
 					<form action='view_concert.php' method='post'>
-
+				
 					<button id='sugg' type='submit' name='username' value=$username>$concert_name</button> 
 					<input type='hidden' name='password' value=$password>
 					<input type='hidden' name='concert_id' value='$concert_id'>
-					</form>
-					</div>";
-				}
-				$result = mysqli_query($success,"select * from news join like_artist  on 
-					like_artist.artist=news.artist  where fans='$username'
- ");
-				//echo"<h3 id='sug'>interesting activities:</h3>";
-				while ($row=mysqli_fetch_array($result))
-				{
-					//$concert_id=$row["newsname"];
-					$newsname=$row["newsname"];
-					$art=$row["artist"];
-					echo "
-					<div>
-					<form action='view_news.php' method='post'>
-
-					<button id='sugg' type='submit' name='newsname' value='$newsname'>$art: <strong>$newsname</strong></button> 
-					<input type='hidden' name='username' value=$username> 
-					<input type='hidden' name='password' value=$password>
 					</form>
 					</div>";
 				}
