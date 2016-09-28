@@ -1,5 +1,7 @@
 package edu.nyu.cs9053.homework2;
 
+import org.jetbrains.annotations.Contract;
+
 import java.math.BigDecimal;
 
 /**
@@ -14,9 +16,9 @@ public class Program {
             System.out.println("Invalid argument");
             System.exit(0);
         }
-        if (args[0].equals("gps")) {
+        if ("gps".equals(args[0])) {
             System.out.println(handleGps(args));
-        } else if (args[0].equals("annuity")) {
+        } else if ("annuity".equals(args[0])) {
             if (handleAnnuity(args).equals(new BigDecimal(-1))) {
                 System.out.println("Invalid argument");
             } else {
@@ -27,7 +29,11 @@ public class Program {
         }
     }
 
+    @Contract("null -> !null")
     private static String handleGps(String[] args) {
+        if (args == null || args.length == 0) {
+            return "Invalid argument";
+        }
         Gps[] gpsPoints = new Gps[args.length - 1];
         for (int i = 1; i < args.length; i++) {
             if (coordinateIsValid(args[i])) {
@@ -74,8 +80,23 @@ public class Program {
 
     private static BigDecimal handleAnnuity(String[] args) {
         if (annuityInputIsValid(args)) {
-            if (!args[1].equals("compound")) {
-                if (args[args.length - 1].equals( "15")) {
+            if (args[args.length - 1].equals( "15")) {
+                return args[1].equals("compound") ? new AnnuityCalculator().computeMonthlyCompoundedFutureValueOfAnnuityIn15Years(Double.parseDouble(args[args.length - 3]),
+                        Double.parseDouble(args[args.length - 2])) : new AnnuityCalculator().computeFutureValueOfAnnuityIn15Years(Double.parseDouble(args[args.length - 3]),
+                        Double.parseDouble(args[args.length - 2]));
+            }
+            if (args[args.length - 1].equals( "30")) {
+                return args[1].equals("compound") ? new AnnuityCalculator().computeFutureValueOfAnnuityIn30Years(Double.parseDouble(args[args.length - 3]),
+                        Double.parseDouble(args[args.length - 2])) : new AnnuityCalculator().computeMonthlyCompoundedFutureValueOfAnnuityIn30Years(Double.parseDouble(args[args.length - 3]),
+                        Double.parseDouble(args[args.length - 2]));
+            }
+            return args[1].equals("compound") ?  new AnnuityCalculator().computeFutureValueOfAnnuity(Double.parseDouble(args[args.length - 3]),
+                    Double.parseDouble(args[args.length - 2]),
+                    Integer.parseInt(args[args.length - 1])) :  new AnnuityCalculator().computeMonthlyCompoundedFutureValueOfAnnuity(Double.parseDouble(args[args.length - 3]),
+                    Double.parseDouble(args[args.length - 2]),
+                    Integer.parseInt(args[args.length - 1]));
+           /* if (!args[1].equals("compound")) {
+               if (args[args.length - 1].equals( "15")) {
                     return new AnnuityCalculator().computeFutureValueOfAnnuityIn15Years(Double.parseDouble(args[args.length - 3]),
                                                                                          Double.parseDouble(args[args.length - 2]));
                 }
@@ -98,7 +119,7 @@ public class Program {
                 return new AnnuityCalculator().computeMonthlyCompoundedFutureValueOfAnnuity(Double.parseDouble(args[args.length - 3]),
                                                                                                 Double.parseDouble(args[args.length - 2]),
                                                                                                 Integer.parseInt(args[args.length - 1]));
-            }
+            }*/
         } else {
             return  new BigDecimal(-1);
         }
