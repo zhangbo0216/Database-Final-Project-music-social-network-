@@ -15,36 +15,28 @@ import java.util.ArrayList;
 public class PolylineEncoder {
 
     public String encodePolyline(Gps[] gpsPoints) {
-		StringBuilder resultBulider = new StringBuilder();
-		if (gpsPoints == null || gpsPoints.length == 0) {
-			return resultBulider.toString();
-		}
+    	String result = "";
     	int prevLatitude = 0;
     	int prevLongitude = 0;
     	for (int i = 0; i < gpsPoints.length; i++) {
     		int latitude = (int) (gpsPoints[i].getLatitude() * 1e5);
     		int longitude = (int) (gpsPoints[i].getLongitude() * 1e5);
-			resultBulider.append(encodeValue(latitude - prevLatitude)).append(encodeValue(longitude - prevLongitude));
-			//result = result + encodeValue(latitude - prevLatitude) + encodeValue(longitude - prevLongitude);
+			result = result + encodeValue(latitude - prevLatitude) + encodeValue(longitude - prevLongitude);
 			prevLatitude = latitude;
 			prevLongitude = longitude;
     	}
-    	return resultBulider.toString();
+    	return result;
     }
 
-// https://developers.google.com/maps/documentation/utilities/polylinealgorithm
     private String encodeValue(int value) {
-		// Step 1-4
     	if (value < 0) {
     		value = ~(value << 1);
     	} else {
     		value = value << 1;
     	}
-		//Step 5-10
     	ArrayList<Integer> chunks = new ArrayList<Integer>();
     	splitToChunks(value, chunks);
     	StringBuilder encodedValueBuilder = new StringBuilder();
-		//Step 11
     	for (int chunk : chunks) {
     		char chunkToAscii = (char) (chunk + 63);
     		encodedValueBuilder.append(chunkToAscii);

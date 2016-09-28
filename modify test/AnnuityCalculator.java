@@ -33,9 +33,6 @@ public class AnnuityCalculator {
      */
     private static final RoundingMode DEFAULT_ROUNDING_MODE = RoundingMode.HALF_UP;
 
-    static final int COMPOUNDING_PERIOD = 12;
-
-
     public BigDecimal computeFutureValueOfAnnuityIn15Years(double annuityAmount, double annualInterestRateInPercent) {
         return computeFutureValueOfAnnuity(annuityAmount, annualInterestRateInPercent, 15);
     }
@@ -57,11 +54,10 @@ public class AnnuityCalculator {
         BigDecimal bigAnnualInterestRateInPercent = new BigDecimal(Double.valueOf(annualInterestRateInPercent));
         BigDecimal bigAnnualInterestRateInDecimal = bigAnnualInterestRateInPercent.divide(new BigDecimal(100), DEFAULT_SCALE, DEFAULT_ROUNDING_MODE);
         BigDecimal futureAnnuity = bigAnnualInterestRateInDecimal.add(new BigDecimal(1));
-        futureAnnuity = futureAnnuity.pow(years).subtract(new BigDecimal(1)).divide(bigAnnualInterestRateInDecimal, DEFAULT_SCALE, DEFAULT_ROUNDING_MODE).multiply(bigAnnuityAmount);
-        /*futureAnnuity = futureAnnuity.pow(years);
+        futureAnnuity = futureAnnuity.pow(years);
         futureAnnuity = futureAnnuity.subtract(new BigDecimal(1));
         futureAnnuity = futureAnnuity.divide(bigAnnualInterestRateInDecimal, DEFAULT_SCALE, DEFAULT_ROUNDING_MODE);
-        futureAnnuity = futureAnnuity.multiply(bigAnnuityAmount);*/
+        futureAnnuity = futureAnnuity.multiply(bigAnnuityAmount);
         return futureAnnuity;
     }
 
@@ -71,11 +67,10 @@ public class AnnuityCalculator {
         BigDecimal bigAnnualInterestRateInDecimal = bigAnnualInterestRateInPercent.divide(new BigDecimal(100), DEFAULT_SCALE, DEFAULT_ROUNDING_MODE);
         BigDecimal monthlyBigAnnualInterestRateInDecimal = bigAnnualInterestRateInDecimal.divide(new BigDecimal(12), DEFAULT_SCALE,DEFAULT_ROUNDING_MODE);
         BigDecimal futureAnnuity = monthlyBigAnnualInterestRateInDecimal.add(new BigDecimal(1));
-        futureAnnuity = futureAnnuity.pow(years * COMPOUNDING_PERIOD).subtract(new BigDecimal(1)).divide(monthlyBigAnnualInterestRateInDecimal, DEFAULT_SCALE, DEFAULT_ROUNDING_MODE).multiply(bigAnnuityAmount);
-       /* futureAnnuity = futureAnnuity.pow(years * COMPOUNDING_PERIOD);
+        futureAnnuity = futureAnnuity.pow(years * 12);
         futureAnnuity = futureAnnuity.subtract(new BigDecimal(1));
         futureAnnuity = futureAnnuity.divide(monthlyBigAnnualInterestRateInDecimal, DEFAULT_SCALE, DEFAULT_ROUNDING_MODE);
-        futureAnnuity = futureAnnuity.multiply(bigAnnuityAmount);*/
+        futureAnnuity = futureAnnuity.multiply(bigAnnuityAmount);
         return futureAnnuity;
     }
 
